@@ -5,7 +5,7 @@
     <title>Cruella — Fashion Rebel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Montserrat -->
+    <!-- Google Font: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
@@ -22,10 +22,11 @@
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
+        /* HEADER */
         header {
             position: fixed;
             top: 0;
@@ -40,7 +41,7 @@
             z-index: 100;
         }
 
-        header .logo {
+        .logo {
             font-weight: 800;
             letter-spacing: 4px;
         }
@@ -73,7 +74,7 @@
             margin-bottom: 20px;
         }
 
-        .hero-text .year {
+        .year {
             font-size: 14px;
             letter-spacing: 2px;
             opacity: 0.7;
@@ -88,7 +89,15 @@
         }
 
         .hero-image {
-            background: url("https://i.imgur.com/7qXQ0Zx.jpg") center/cover no-repeat;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* DESCRIPTION */
@@ -124,16 +133,16 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero-image {
-                height: 60vh;
-            }
-
             .hero-text {
-                padding: 100px 30px 60px;
+                padding: 120px 30px 60px;
             }
 
             .hero-text h1 {
                 font-size: 48px;
+            }
+
+            .hero-image {
+                height: 60vh;
             }
 
             .description {
@@ -158,26 +167,26 @@
         <h1>CRUELLA</h1>
         <div class="year">Фильм · 2021</div>
         <p>
-            Это не история злодейки.  
-            Это история рождения иконы.  
-            Бунт против системы, мода как оружие и путь,
-            который превращает Эстеллу в Круэллу.
+            Это не просто история злодейки.  
+            Это путь бунта, боли и таланта.  
+            Мода становится оружием, а хаос — стилем.
         </p>
     </div>
 
-    <div class="hero-image"></div>
+    <div class="hero-image">
+        <img src="cruella.jpg" alt="Cruella">
+    </div>
 </section>
 
 <section class="description">
     <h2>О фильме</h2>
     <p>
-        «Круэлла» — художественный фильм студии Disney, вышедший в 2021 году.
-        Картина рассказывает альтернативную историю становления одного из самых
-        ярких и противоречивых персонажей.  
+        «Круэлла» — фильм студии Disney, вышедший в 2021 году.
+        Он рассказывает альтернативную историю становления одного из самых
+        культовых персонажей.
         <br><br>
-        Фильм сочетает в себе эстетику высокой моды, панк-культуры и драму личности.
-        Это история о таланте, боли, выборе и цене, которую приходится платить за свободу
-        быть собой.
+        Картина сочетает драму, моду и эстетику панк-культуры, показывая,
+        как личные травмы, амбиции и талант формируют легенду.
     </p>
 </section>
 
