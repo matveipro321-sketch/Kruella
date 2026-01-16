@@ -2,65 +2,154 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Круэлла — О фильме</title>
+    <title>Cruella — Fashion Rebel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0b0b0b;
-            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #111;
+            color: #fff;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* HEADER */
         header {
-            background-color: #000000;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #b00000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(6px);
+            z-index: 100;
         }
 
-        header h1 {
-            margin: 0;
-            color: #b00000;
+        header .logo {
+            font-weight: 800;
             letter-spacing: 3px;
         }
 
-        nav {
-            margin-top: 10px;
-        }
-
         nav a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #b00000;
-        }
-
-        main {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: #000000;
-            text-align: center;
-            padding: 15px;
+            margin-left: 25px;
+            font-weight: 400;
             font-size: 14px;
-            border-top: 2px solid #b00000;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-text {
+            padding: 120px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-text h1 {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            background: url("https://images.unsplash.com/photo-1520975922284-8b456906c813") center/cover no-repeat;
+        }
+
+        /* SECTION */
+        section {
+            padding: 100px 60px;
+            background: #fff;
+            color: #000;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .card p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 13px;
+            background: #111;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text {
+                padding: 140px 30px 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 48px;
+            }
+
+            section {
+                padding: 60px 30px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>КРУЭЛЛА</h1>
+    <div class="logo">CRUELLA</div>
     <nav>
         <a href="index.html">О фильме</a>
         <a href="actors.html">Актёры</a>
@@ -68,23 +157,40 @@
     </nav>
 </header>
 
-<main>
-    <h2>О фильме</h2>
+<div class="hero">
+    <div class="hero-text">
+        <h1>FASHION<br>REBELLION</h1>
+        <p>
+            История Круэллы — это не просто путь злодейки.
+            Это бунт, стиль и рождение иконы.
+        </p>
+    </div>
+    <div class="hero-image"></div>
+</div>
 
-    <p>
-        «Круэлла» — это фильм студии Disney, рассказывающий историю становления одной из самых
-        известных злодеек. Картина показывает путь Эстеллы — талантливой, дерзкой и амбициозной девушки,
-        которая бросает вызов миру моды и обществу.
-    </p>
+<section>
+    <h2>Визуальный стиль фильма</h2>
 
-    <p>
-        Фильм отличается мрачной атмосферой, стильными костюмами и динамичным сюжетом.
-        Он показывает, как из обычного человека может родиться легенда.
-    </p>
-</main>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+            <p>Контраст чёрного и белого</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+            <p>Панк и высокая мода</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+            <p>Смелые образы и характер</p>
+        </div>
+    </div>
+</section>
 
 <footer>
-    © 2026 Проект по HTML | Круэлла
+    © 2026 Cruella Project · HTML / CSS
 </footer>
 
 </body>
